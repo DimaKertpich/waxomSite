@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+    <section class="header" :class="sliderHeader">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-3">
+                    <div class="header__logo d-flex">
+                        <div class="header__logo-img">
+                            <img src="./images/logos.png">
+                        </div>
+                        <div class="header__logo-text">
+                            <p>Waxom</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="header__menu">
+                        <ul>
+                            <li>Home</li>
+                            <li>About us</li>
+                            <li>Portfolio</li>
+                            <li>Features</li>
+                            <li>Blog</li>
+                            <li>Pricing</li>
+                            <li>Shortcodes</li>
+                            <li>Contact</li>
+                            <li><i class="fas fa-shopping-cart"></i></li>
+                            <li><i class="fas fa-search"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-around text-center">
+                <div class="col-xl-2">
+                    <div class="header__arrow">
+                        <i @click="prevImage" class="fas fa-chevron-left"></i>
+                    </div>
+                </div>
+
+                <div class="col-xl-8">
+                    <div class="header__title">
+                        <h4>Unique and Modern Design</h4>
+                        <h3>Portfolio PSD Template</h3>
+
+                        <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet
+                        doming id quod mazim placerat facer possim assum.</p>
+                    </div>
+                    <div class="header__btn">
+                        <button>Get started</button>
+                    </div>
+                    <div class="header__circle">
+                        <ul>
+                            <li><i :class="{circleActive: currentlyImage == 0}" class="fas fa-circle"></i></li>
+                            <li><i :class="{circleActive: currentlyImage == 1}" class="fas fa-circle"></i></li>
+                            <li><i :class="{circleActive: currentlyImage == 2}" class="fas fa-circle"></i></li>
+                            <li><i :class="{circleActive: currentlyImage == 3}" class="fas fa-circle"></i></li>
+                            <li><i :class="{circleActive: currentlyImage == 4}" class="fas fa-circle"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xl-2">
+                    <div class="header__arrow">
+                        <i @click="nextImage" class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+
+    <section class="services">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-xl-3">
+                    <div class="services__block">
+                        <div class="services__item">
+                            <i class="fas fa-pen-square"></i>
+                        </div>
+                        <div class="services__text">
+                            <h4>Web & App Design</h4>
+
+                            <p>
+                                Nam liber tempor cum soluta nobis
+                                eleifend option congue nihil imperdiet
+                                doming id quod mazim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="services__block">
+                        <div class="services__item">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <div class="services__text">
+                            <h4>Development</h4>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, adipiscing
+                                elit, sed diam nonummy nibh euismod
+                                tincidunt ut laoreet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="services__block">
+                        <div class="services__item">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="services__text">
+                            <h4>Customization</h4>
+
+                            <p>
+                                Nam liber tempor cum soluta nobis
+                                eleifend option congue nihil imperdiet
+                                doming id quod mazim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="services__block">
+                        <div class="services__item">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <div class="services__text">
+                            <h4>Marketing</h4>
+
+                            <p>
+                                Nam liber tempor cum soluta nobis
+                                eleifend option congue nihil imperdiet
+                                doming id quod mazim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Realization -->
+    <section class="realization">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-8">
+                    <div class="realization__title">
+                        <h3>Waxom is Realization of your ideas.</h3>
+
+                        <p>
+                            Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam
+                            processus dynamicus, qui sequitur mutationem consuetudium.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+           <div class="rowImg">
+                <div class="realization__img">
+                    <div class="realization__img-left">
+                        <img src="./images/realizationImg/browser-left.png">
+                    </div>
+                </div>
+
+                <div class="realization__img">
+                    <div class="realization__img-center">
+                        <img src="./images/realizationImg/browser-center.png">
+                    </div>
+                </div>
+
+                <div class="realization__img">
+                    <div class="realization__img-right">
+                        <img src="./images/realizationImg/browser-right.png">
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <!-- Boxes -->
+    <section class="boxes">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-6">
+                    <div class="boxes__text">
+                        <h4><span>Waxom</span> Multipurpose WordPress Theme</h4>
+                        <p>
+                            Don't Forget to Rate the Template. Thanks so much! 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="boxes__btn">
+                        <button>purchase now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+               <div class="col-xl-8">
+                   <div class="projects__title">
+                       <h3>Our Latest Projects.</h3>
+
+                       <p>
+                           Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam
+                           processus dynamicus, qui sequitur mutationem consuetudium.
+                       </p>
+                   </div>
+               </div>
+            </div>
+
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-6">
+                    <div class="projects__chooseClass">
+                        <button :class="{buttonFocus: activeBlock == 1}" @click="activeBlockFn(1)">All</button>
+                        <button :class="{buttonFocus: activeBlock == 2}" @click="activeBlockFn(2)">Web Design</button>
+                        <button :class="{buttonFocus: activeBlock == 3}" @click="activeBlockFn(3)">Mobile App</button>
+                        <button :class="{buttonFocus: activeBlock == 4}" @click="activeBlockFn(4)">Illustration</button>
+                        <button :class="{buttonFocus: activeBlock == 5}" @click="activeBlockFn(5)">Photography</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 2}]">
+                        <div class="projects__img">
+                                <div class="projects__link">
+                                    <i class="fas fa-link"></i>
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            <img src="./images/project/photo1.png">
+                        </div>
+                        <div class="projects__img-text">
+                            <h5>Claritas Etiam Processus</h5>
+                            <p>
+                                Photography, Nature
+                            </p>
+                        </div>
+                     </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 2}]">
+                        <div class="projects__img">
+                            <div class="projects__link">
+                                <i class="fas fa-link"></i>
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <img src="./images/project/photo2.png">
+                        </div>
+                        <div class="projects__img-text">
+                            <h5>Quam Nutamus Farum</h5>
+                            <p>
+                                Graphic Design, Mock-Up
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 2},  {operatingBlock: activeBlock == 5}]">
+                        <div class="projects__img">
+                            <div class="projects__link">
+                                <i class="fas fa-link"></i>
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <img src="./images/project/photo3.png">
+                        </div>
+                        <div class="projects__img-text">
+                            <h5>Usus Legentis Videntur</h5>
+                            <p>
+                                Photography, Holiday
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 3}]">
+                        <div class="projects__img">
+                            <div class="projects__link">
+                                <i class="fas fa-link"></i>
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <img src="./images/project/photo4.png">
+                        </div>
+                        <div class="projects__img-text">
+                            <h5>Claritas Etiam Processus</h5>
+                            <p>
+                                Photography, Nature
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 3}, {operatingBlock: activeBlock == 5}]">
+                        <div class="projects__img">
+                            <div class="projects__link">
+                                <i class="fas fa-link"></i>
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <img src="./images/project/photo5.png">
+                        </div>
+                        <div class="projects__img-text">
+                            <h5>Quam Nutamus Farum</h5>
+                            <p>
+                                Graphic Design, Mock-Up
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 3}]">
+                        <div class="projects__img">
+                            <div class="projects__link">
+                                <i class="fas fa-link"></i>
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <img src="./images/project/photo6.png">
+                        </div>
+                        <div class="projects__img-text">
+                            <h5>Usus Legentis Videntur</h5>
+                            <p>
+                                Photography, Holiday
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div v-if="loadMore == true" class="row">
+                <div class="col-xl-4">
+                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 4}, {operatingBlock: activeBlock == 5}]">
+                        <div class="projects__img">
+                            <div class="projects__link">
+                                <i class="fas fa-link"></i>
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <img src="./images/project/photo4.png">
+                        </div>
+                        <div class="projects__img-text">
+                            <h5>Claritas Etiam Processus</h5>
+                            <p>
+                                Photography, Nature
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 4}]">
+                        <div class="projects__img">
+                            <div class="projects__link">
+                                <i class="fas fa-link"></i>
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <img src="./images/project/photo5.png">
+                        </div>
+                        <div class="projects__img-text">
+                            <h5>Quam Nutamus Farum</h5>
+                            <p>
+                                Graphic Design, Mock-Up
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 4}]">
+                        <div class="projects__img">
+                            <div class="projects__link">
+                                <i class="fas fa-link"></i>
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <img src="./images/project/photo6.png">
+                        </div>
+                        <div class="projects__img-text">
+                            <h5>Usus Legentis Videntur</h5>
+                            <p>
+                                Photography, Holiday
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center text-center">
+                <div class="container">
+                    <div class="col-lx-2">
+                        <div class="projects__loadMoreBtn">
+                            <button @click="loadMore = !loadMore"> Load More</button>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation -->
+    <section class="presentation">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-6">
+                    <div class="presentation__play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                    <div class="presentation__title">
+                        <h4>Waxom Video Presentation</h4>
+
+                        <p>
+                            Investigationes demonstraverunt lectores legere me lius quod ii legunt
+                            saepius, qui sequitur mutationem consuetudium. 
+                        </p>
+
+                        <span>03:26</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Devices -->
+    <section class="devices">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 text-center">
+                    <div class="devices__img">
+                        <img src="./images/devices/iPhone in hand.png">
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="devices__text">
+                        <h4>Excellent for Mobile Devices.</h4>
+
+                        <p>
+                            Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                            nisi ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores
+                            legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis
+                            videntur parum clari, fiant sollemnes in futurum.
+                        </p>
+
+                        <ul>
+                            <li><i class="fas fa-chevron-circle-right"></i>Nam liber tempor cum soluta nobis eleifend option;</li>
+                            <li><i class="fas fa-chevron-circle-right"></i>Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
+                            <li><i class="fas fa-chevron-circle-right"></i>Eodem modo typi, qui nunc  nobis videntur parum futurum;</li>
+                            <li><i class="fas fa-chevron-circle-right"></i>Investigationes demonstraverunt lectores;</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counters -->
+    <section class="counters">
+        <div class="container">
+            <div class="row justify-content-around text-center">
+                <div class="col-lx-2 text">
+                    <div class="counters__item">
+                        <div class="counters__icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="counters__text">
+                            <h4>3587</h4>
+                            <span>satisfied clients</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lx-2 text text-center">
+                    <div class="counters__item">
+                        <div class="counters__icon">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                        <div class="counters__text">
+                            <h4>207</h4>
+                            <span>cups of coffee</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lx-2 text text-center">
+                    <div class="counters__item">
+                        <div class="counters__icon">
+                            <i class="far fa-comment-dots"></i>
+                        </div>
+                        <div class="counters__text">
+                            <h4>2500</h4>
+                            <span>blog posts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lx-2 text text-center">
+                    <div class="counters__item">
+                        <div class="counters__icon">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="counters__text">
+                            <h4>873</h4>
+                            <span>likes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lx-2 text text-center">
+                    <div class="counters__item">
+                        <div class="counters__icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="counters__text">
+                            <h4>900</h4>
+                            <span>we launched</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posts -->
+    <section class="recentPosts">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 text-center">
+                    <div class="recentPosts__title">
+                        <h3>Recent Posts</h3>
+
+                        <p>
+                            Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam
+                            processus dynamicus, qui sequitur mutationem consuetudium.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="recentPosts__post">
+                        <div class="recentPosts__img">
+                            <img src="./images/recentPosts/photo1.png">
+                        </div>
+
+                        <div class="recentPosts__calendar">
+                            <div class="recentPosts__calendarNumb">30</div>
+                            <div class="recentPosts__calendarMonth">Sep.</div>
+                        </div>
+
+                        <div class="recentPosts__text">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+
+                            <p>
+                                Claritas est etiam processus dynamicus, qui
+                                sequitur mutationem consuetudium.
+                            </p>
+
+                            <span>Read more <i class="fas fa-caret-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="recentPosts__post">
+                        <div class="recentPosts__img">
+                            <img src="./images/recentPosts/photo2.png">
+                        </div>
+
+                        <div class="recentPosts__calendar">
+                            <div class="recentPosts__calendarNumb">30</div>
+                            <div class="recentPosts__calendarMonth">Sep.</div>
+                        </div>
+
+                        <div class="recentPosts__text">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+
+                            <p>
+                                Claritas est etiam processus dynamicus, qui
+                                sequitur mutationem consuetudium.
+                            </p>
+
+                            <span>Read more <i class="fas fa-caret-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="recentPosts__post">
+                        
+                        <div class="recentPosts__img">
+                            <img src="./images/recentPosts/photo3.png">
+                        </div>
+                        <div class="recentPosts__calendar">
+                            <div class="recentPosts__calendarNumb">30</div>
+                            <div class="recentPosts__calendarMonth">Sep.</div>
+                        </div>
+
+                        <div class="recentPosts__text">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+
+                            <p>
+                                Claritas est etiam processus dynamicus, qui
+                                sequitur mutationem consuetudium.
+                            </p>
+
+                            <span>Read more <i class="fas fa-caret-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="partners">
+        <div class="container">
+            <div class="row justify-content-center text-center align-items-center">
+                <div class="col-xl-3">
+                    <div class="partners__logos">
+                        <img src="./images/partners/logo-01.png">
+                    </div>
+                    
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="partners__logos">
+                        <img src="./images/partners/logo-02.png">
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="partners__logos">
+                        <img src="./images/partners/logo-03.png">
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="partners__logos">
+                        <img src="./images/partners/logo-04.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3">
+                        <div class="footer__logo">
+                            <div class="footer__logo-img">
+                                <img src="./images/logos.png">
+                            </div>
+
+                            <div class="footer__logo-text">
+                                <p>Waxom</p>
+                            </div>
+                        </div>
+                        <div class="footer__text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit, sed diam
+                                nonummy nibh euismod tincidunt ut
+                                laoreet dolore magna aliquam erat
+                                volutpat. Ut wisi enim ad minim
+                                veniam, quis nostrud exerci suscipit
+                                lobortis claritatem.
+                            </p>
+
+                            <span>Read More <i class="fas fa-caret-right"></i></span>
+                        </div>
+                    </div>
+                
+
+                <div class="col-xl-3">
+                    <div class="footer__block">
+                        <h3>Recent Posts</h3>
+                        
+                        <div class="footer__post">
+                            <span>September 08, 2015</span>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit
+                            </p>
+                        </div>
+
+                        <div class="footer__post">
+                            <div class="footer__line"></div>
+
+                            <span>September 08, 2015</span>
+
+                            <p>
+                                Diam nonummy nibh euismod tincidunt
+                                ut laoreet dolore magna
+                            </p>
+                        </div>
+
+                        <div class="footer__post">
+                            <div class="footer__line"></div>
+
+                            <span>September 08, 2015</span>
+
+                            <p>
+                                Claritas est etiam processus dynamicus,
+                                qui sequitur mutationem per seacula
+                                quarta decima
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="footer__block">
+                        <h3>Our Twitter</h3>
+
+                        <div class="footer__ourTwitter">
+                            <p>
+                                <span>@Waxom</span> Cum soluta nobis eleifend option congue
+                                nihil imperdiet doming
+                            </p>
+
+                            <span>3 mins ago</span>
+                        </div>
+
+                        <div class="footer__ourTwitter">
+
+                            <div class="footer__line"></div>
+
+                            <p>
+                                Mirum est <span>#envato</span> notare quam littera
+                                gothica, quam nunc putamus parum anteposuerit litterarum
+                            </p>
+
+                            <span>5 hours ago</span>
+                        </div>
+
+                        <div class="footer__ourTwitter">
+
+                            <div class="footer__line"></div>
+
+                            <p>
+                                Soluta nobis option <span>bit.ly/1Hniso7</span>
+                            </p>
+
+                            <span>20 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="footer__block">
+                        <h3>Dribbble Widget</h3>
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="footer__block-img">
+                                    <img src="./images/footerImg/photo.png">
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6">
+                                <div class="footer__block-img">
+                                    <img src="./images/footerImg/photo2.png">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-xl-6">
+                                <div class="footer__block-img">
+                                    <img src="./images/footerImg/photo3.png">
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6">
+                                <div class="footer__block-img">
+                                    <img src="./images/footerImg/photo4.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

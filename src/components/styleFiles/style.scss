@@ -1,0 +1,906 @@
+@import 'mixin';
+@import 'varb';
+
+
+// --- Header ---
+
+.sliderImageOne{
+    background: url("../images/headerSlider/1.png") no-repeat;
+}
+
+.sliderImageTwo{
+    background: url("../images/headerSlider/2.jpg") no-repeat;
+}
+
+.sliderImageThree{
+    background: url("../images/headerSlider/3.jpg") no-repeat;
+}
+
+.sliderImageFour{
+    background: url("../images/headerSlider/4.jpg") no-repeat;
+}
+
+.sliderImageFive{
+    background: url("../images/headerSlider/5.jpg") no-repeat;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+
+    &__logo{
+        padding: 50px 0 0 30px;
+    }
+
+    &__logo-text{
+        @include montserrat(400);
+        color: white;
+        font-size: 34px;
+        padding: 5px 0 0 0px;
+    }
+
+    &__menu{
+        padding-top: 70px;
+        ul{
+            margin: 0;
+            padding: 0;
+            
+
+            li{
+                @include montserrat(300);
+                font-size: 16px;
+                color: $colorWhite;
+                display: inline;
+                list-style-type: none;
+                margin-right: 20px;
+                cursor: pointer;
+                transition: .1s ease-in-out;
+            }
+
+            li:nth-child(10){
+                margin-right: 0;
+            }
+
+            li:hover{
+                color: $colorHover;
+                transition: .1s ease-in-out;
+            }
+        }
+    }
+
+    &__title{
+        padding-top: 150px;
+        color: $colorWhite;
+
+        h4{
+            @include raleway(500);
+            font-size: 36px;
+        }
+
+        h3{
+            @include raleway(800);
+            font-size: 52px;
+        }
+
+        p{
+            @include montserrat(300);
+            font-size: 14px;
+        }
+    }
+
+    &__arrow{
+        padding-top: 220px;
+        font-size: 42px;
+        color: $colorWhite;
+       
+        i{
+            cursor: pointer;
+        }
+    }
+
+    &__btn{
+        padding-top: 30px;
+
+        button{
+            @include btn(170px, 52px);
+            @include raleway(800);
+            font-size: 14px;
+
+        }
+    }
+
+    &__circle{
+
+        ul{
+
+            padding: 170px 0 0;
+
+            li{
+                color: $headerCircleColor;
+                font-size: 12px;
+                display: inline;
+                margin-right: 10px;
+            }
+
+            li:nth-child(5){
+                margin-right: 0;
+            }
+        }
+    }
+
+    .circleActive{
+        color: transparent;
+        border: 1px solid $headerCircleColorBorder;
+        border-radius: 10px;
+    }
+}
+
+.header:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(41, 35, 26, 0.7);
+}
+
+// --- Services ---
+
+.services{
+
+    padding-top: 60px;
+    padding-bottom: 100px;
+   
+    &__block{
+        cursor: pointer;
+    }
+
+    &__block:hover{
+        
+        i{
+            color: $colorHover;
+            transition: .1s ease-in-out;
+        }
+
+        h4{
+            color: $colorHover;
+            transition: .1s ease-in-out;
+        }
+
+    }
+
+    &__block:after{
+        content: '';
+        display: block;
+        width: 70px;
+        height: 3px;
+        background: $colorHover;
+        opacity: 0.5;
+        margin: 10px auto 0;
+    }
+
+    &__block:hover:after{
+        opacity: 1;
+    }
+
+    &__item{
+        font-size: 42px;
+        color: $colorTextTitle;
+        
+    }
+
+    &__text{
+        padding-top: 25px;
+        h4{
+            @include raleway(600);
+            font-size: 22px;
+            color: $colorTextTitle;
+            
+        }
+
+        p{
+            @include montserrat(300);
+            padding-top: 10px;
+            font-size: 14px;
+        }
+    }
+}
+
+// --- Realization ---
+
+.realization{
+    position: relative;
+    padding: 80px 0 182px;
+    background: $sectionBgColor;
+
+    &__title{
+       
+        h3{
+            @include raleway(600);
+            @include title();
+        }
+
+        p{
+            @include montserrat(300);
+
+            color: $colorText;
+        }
+    }
+
+    .rowImg{
+        position: relative;
+        padding-bottom: 250px;
+    }
+
+    &__img-left{
+        position: absolute;
+        left: 0;
+        top: 110px;
+        
+        img{
+            width: 620px;
+        }
+    }
+
+    &__img-right{
+        position: absolute;
+        right: 0;
+        top: 110px;
+
+        img{
+            width: 620px;
+        }
+    }
+
+    &__img-center{
+        position: absolute;
+        right: 0;
+        margin-right: 235px;
+        top: 32px;
+        z-index: 1;
+
+        img{
+            width: 640px;
+        }
+    }
+}
+
+// --- Boxes ---
+
+.boxes{
+    padding: 44px 0 22px;
+    background: linear-gradient(to right, $leftGradientColor, $rightGradientColor);
+
+    &__text{
+        
+        h4{
+            @include raleway(400);
+
+            font-size: 28px;
+            color: $colorWhite;
+
+            span{
+                color: $colorHover;
+            }
+        }
+
+        p{
+            @include montserrat(300);
+
+            font-size: 18px;
+            color: $boxesTextColor;
+        }
+    }
+
+    &__btn{
+        padding-top: 10px;
+        button{
+            @include raleway(800);
+            @include btn(170px, 50px);
+        }
+    }
+
+}
+
+// --- projects --- 
+
+.projects{
+
+    &__title{
+
+        padding-top: 80px;
+
+        h3{
+            @include raleway(600);
+            @include title();
+        }
+
+        p{
+            @include montserrat(300);
+            color: $colorText;
+        }
+
+    }
+
+    &__chooseClass{
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-around;
+
+        button{
+            @include montserrat(300);
+
+            padding: 7px 8px;
+            font-size: 14px;
+            color: $colorText;
+            background: $colorWhite;
+            border: 1px solid $borderColorBtn;
+            border-radius: 4px;
+        }
+
+        .buttonFocus{
+            color: $colorWhite;
+            background: $colorBtn;
+        }
+    }
+
+    &__item{
+        position: relative;
+        margin-top: 50px;
+        opacity: 0.7;
+        pointer-events: none;
+    }
+    
+    &__img{
+
+        img{
+            width: 100%;
+            height: 250px;
+        }
+    }
+
+    &__img-text{
+        position: relative;
+        padding: 10px 0 10px 14px;
+        background: $sectionBgColor;
+
+        h5{
+            @include raleway(500);
+
+            font-size: 20px;
+            color: $colorHover;
+        }
+
+        p{
+            @include montserrat(300);
+            
+            font-size: 14px;
+            color: $colorText;
+        }
+    }
+
+    &__img-text:after{
+        position: absolute;
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: $sectionBgColor;
+        transform: rotate(45deg);
+        top: -8px;
+        left: 12px;
+    }
+
+    &__item:hover &__img-text:after{
+        background: $projectsColorImgText;
+    }
+
+    .operatingBlock{
+        opacity: 1;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+    &__loadMoreBtn{
+        
+        padding-top: 70px;
+
+        button{
+            @include raleway(800);
+            @include btn(170px, 50px);
+        }
+    }
+
+    &__link{
+        position: absolute;
+        top: 110px;
+        left: 50%;
+        margin-left: -28px;
+        font-size: 20px;
+        display: none;
+        color: $colorWhite;
+
+        :nth-child(1){
+            margin-right: 16px;
+        }
+        
+    }
+
+    &__item:hover &__img-text{
+        background: $projectsColorImgText;
+       }
+    
+    &__item:hover &__img::before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(41, 35, 26, 0.7);
+        position: absolute;
+        top: 0;
+    }
+       
+    &__item:hover &__img{
+
+        .projects__link{
+            display: block;
+
+            :hover{
+                color: $colorHover;
+            }
+        }
+    }
+    
+}
+
+// --- Presentation ---
+
+.presentation{
+    margin-top: 100px;
+    padding: 220px 0 215px;
+    width: 100%;
+    height: 100%;
+    background: url('../images/videoPresentation/photo.png') no-repeat center;
+    background-size: cover;
+    position: relative;
+    
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background:rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+
+    }
+
+    &__play{
+        font-size: 48px;
+        color: $colorWhite;
+        width: 80px;
+        height: 80px;
+        background:rgba(15, 15, 15, 0.5);
+        margin: 0 auto 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        i{
+            
+            cursor: pointer;
+        }
+
+    }
+
+    &__title{
+
+        color: $colorWhite;
+
+        h4{
+            @include raleway(400);
+
+            font-size: 30px;
+        }
+
+        p{
+            @include montserrat(300);
+            margin: 15px 0 35px;
+        }
+
+        span{
+            @include montserrat(400);
+
+            font-size: 14px;
+            color: $colorHover;
+        }
+    }
+
+}
+
+// --- devices ---
+
+.devices{
+    padding-top: 80px;
+
+    &__text{
+
+        padding-top: 100px;
+
+        h4{
+            @include raleway(600);
+            @include title;
+        }
+
+        p{
+            @include montserrat(300);
+
+            padding-top: 10px;
+            color: $colorText;
+        }
+
+        ul{
+
+            padding: 20px 0px 0px 30px;
+            line-height: 30px;
+
+            li{
+                @include montserrat(300);
+
+                color: $colorText;
+                list-style-type: none;
+
+                i{
+                    font-size: 18px;
+                    margin-right: 20px;
+                    color: $colorHover;
+                }
+            }
+        }
+    }
+}
+
+// --- Counters ---
+
+.counters{
+    background: linear-gradient(to right, $leftGradientColor, $rightGradientColor);
+
+    &__item{
+        padding: 68px 0 40px;
+    }
+
+    &__item:after{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: $colorWhite;
+        margin: 20px auto 0;
+    }
+
+    &__icon{
+
+        margin-bottom: 16px;
+
+        i{  
+            font-size: 36px;
+            color: $colorHover;
+        }
+    }
+
+    &__text{
+
+        h4{
+            @include montserrat(200);
+            
+            font-size: 48px;
+            color: $colorWhite;
+        }
+
+        span{
+            @include montserrat(300);
+
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $colorHover;
+        }
+    }
+}
+
+// --- Posts ---
+
+.recentPosts{
+
+    padding-top: 80px;
+
+    &__title{
+
+        h3{
+            @include raleway(600);
+            @include title();
+        }
+
+        p{
+            @include montserrat(300);
+
+            color: $colorText;
+        }
+    }
+
+    &__post{
+        position: relative;
+        margin-top: 50px;
+
+    }
+
+    &__img{
+        position: relative;
+        height: 220px;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__text{
+
+        padding: 20px 0 10px 15px;
+        
+        h4{
+            @include raleway(500);
+
+            font-size: 20px;
+            color: $colorTextTitle;
+        }
+
+        p{
+            @include montserrat(300);
+
+            font-size: 14px;
+            color: $colorText;
+        }
+
+        span{
+            @include montserrat(300);
+
+            cursor: pointer;
+            font-size: 14px;
+            color: $colorHover;
+
+            i{
+                margin-left: 4px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    &__calendar{
+        width: 45px;
+        position: absolute;
+        top: 20px;
+        left: 26px;
+        text-align: center;
+    }
+
+    &__calendarNumb{
+        @include montserrat(300);
+
+        padding: 2px 0;
+        font-size: 20px;
+        color: $colorWhite;
+        background: $CalendarNumbBg;
+        border-radius: 4px 4px 0px 0px;
+    }
+
+    &__calendarMonth{
+        @include raleway(400);
+
+        padding: 2px 0; 
+        font-size: 12px;
+        color: $colorWhite;
+        background: $CalendarMonthBg;
+        border-radius: 0px 0px 4px 4px;
+    }
+
+
+    &__post:hover &__img:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(41, 35, 26, 0.5);        
+    }
+
+    &__post:hover &__text{
+        background: $projectsColorImgText;
+
+        h4{
+            color: $colorHover;
+        }
+
+        p{
+            color: $colorWhite;
+        }
+
+        span{
+            color: $colorHover;
+        }
+    }
+
+    &__post:hover &__calendarNumb{
+        background: $colorHover;
+    }
+
+    &__post:hover &__calendarMonth{
+        background: $CalendarMonthBgHover;
+    }
+        
+    
+}
+
+// --- Partners --- 
+
+.partners{
+    width: 100%;
+    height: 100%;
+    background: url("../images/partners/photo.png") no-repeat center;
+    background-size: cover;
+    padding: 140px 0 140px;
+    margin-top: 100px;
+    position: relative;
+
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba( 0, 0, 0, 0.6);
+
+    }
+
+    &__logos{
+    
+        img{
+            width: 70%;
+            
+        }
+    }
+}
+
+// --- Footer ---
+
+.footer{
+    padding-top: 80px;
+    background: $footerBgColor;
+
+    &__logo{
+        display: flex;
+    }
+
+    &__logo-text{
+        
+
+        p{
+            @include raleway(400);
+
+            font-size: 34px;
+            color: $colorWhite;
+            padding-top: 6px;
+        }
+    }
+
+    &__text{
+        
+        p{
+            @include montserrat(300);
+
+            font-size: 14px;
+            color: $colorTextTitle;
+        }
+
+        span{
+            @include montserrat(400);
+
+            font-size: 14px;
+            color: $footerReadMore;
+            cursor: pointer;
+
+            i{
+                font-size: 10px;
+                margin-left: 4px;
+            }
+        }
+    }
+
+    &__block{
+
+        padding-top: 30px;
+
+        h3{
+            @include raleway(600);
+
+            font-size: 24px;
+            color: $colorWhite;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__post{
+
+        cursor: pointer;
+        
+        span{
+            @include montserrat(300);
+
+            font-size: 12px;
+            color: $CalendarNumbBg;
+        }
+
+        p{
+            @include montserrat(300);
+
+            font-size: 14px;
+            color: $colorTextTitle;
+        }
+    }
+
+    &__line{
+        width: 100%;
+        height: 1px;
+        background: $CalendarMonthBg;
+        margin: 16px 0 8px 0;
+    }
+
+    &__post:hover{
+
+        span{
+            color: $colorWhite;
+        }
+
+        p{
+            color: $colorHover;
+        }
+    }
+
+    &__ourTwitter{
+
+        p{
+            @include montserrat(300);
+
+            font-size: 14px;
+            color: $colorTextTitle;
+            margin-bottom: -4px;
+        
+            span{
+                color: $colorTextSpan;
+                cursor: pointer;
+            }
+        }
+
+        span{
+            @include montserrat(300);
+
+            font-size: 12px;
+            color: $CalendarNumbBg;
+        }
+    }
+
+    &__block-img{
+
+        img{
+            width: 100%;
+            height: 90px;
+        }
+    }
+}

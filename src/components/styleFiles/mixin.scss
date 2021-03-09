@@ -1,0 +1,26 @@
+@mixin montserrat($fontW){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: $fontW;
+}
+
+@mixin raleway($fontW){
+    font-family: 'Raleway', sans-serif;
+    font-weight: $fontW;
+}
+
+@mixin btn($width, $height){
+    width: $width;
+    height: $height;
+    background: $colorBtn;
+    border-radius: 4px;
+    text-decoration: uppercase;
+    color: $colorWhite;
+    border: none;
+    border-bottom: 3px solid $borderBot;
+}
+
+@mixin title(){
+    font-size: 30px;
+    color: $colorTextTitle;
+    margin-bottom: 20px;
+}
