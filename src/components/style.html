@@ -10,7 +10,7 @@
     <section class="header" :class="sliderHeader">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-xl-3">
+                <div class="col-xl-3 col-lg-4 col-md-4">
                     <div class="header__logo d-flex">
                         <div class="header__logo-img">
                             <img src="./images/logos.png">
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-8">
+                <div class="col-xl-8 header__adptMenu">
                     <div class="header__menu">
                         <ul>
                             <li>Home</li>
@@ -36,16 +36,41 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="col-lg-2 col-md-4 text-center">
+                    <div :class="{hideMenuBar: toggleHideMenu == true}" class="header__bar">
+                        <i @click="toggleHideMenu = true" class="fas fa-bars"></i>
+                    </div>
+                </div>
+
+                <div v-if="toggleHideMenu" class="header__hideMenu">
+                    <ul>
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>Portfolio</li>
+                        <li>Features</li>
+                        <li>Blog</li>
+                        <li>Pricing</li>
+                        <li>Shortcodes</li>
+                        <li>Contact</li>
+                        <li><i class="fas fa-shopping-cart"></i></li>
+                        <li><i class="fas fa-search"></i></li>
+                    </ul>
+
+                    <div class="header__hideMenuBar">
+                        <i @click="toggleHideMenu = false" class="fas fa-bars"></i>
+                    </div>
+                </div>
             </div>
 
             <div class="row justify-content-around text-center">
-                <div class="col-xl-2">
+                <div class="col-xl-2 col-lg-2 col-md-1">
                     <div class="header__arrow">
                         <i @click="prevImage" class="fas fa-chevron-left"></i>
                     </div>
                 </div>
 
-                <div class="col-xl-8">
+                <div class="col-xl-8 col-lg-8 col-md-10">
                     <div class="header__title">
                         <h4>Unique and Modern Design</h4>
                         <h3>Portfolio PSD Template</h3>
@@ -67,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-2">
+                <div class="col-xl-2 col-lg-2 col-md-1">
                     <div class="header__arrow">
                         <i @click="nextImage" class="fas fa-chevron-right"></i>
                     </div>
@@ -293,9 +318,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            
 
-            <div class="row">
+           
                 <div class="col-xl-4">
                     <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 3}]">
                         <div class="projects__img">
@@ -349,62 +374,62 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div v-if="loadMore == true" class="row">
-                <div class="col-xl-4">
-                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 4}, {operatingBlock: activeBlock == 5}]">
-                        <div class="projects__img">
-                            <div class="projects__link">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-search"></i>
+            
+                <template v-if="loadMore == true">
+                    <div class="col-xl-4">
+                        <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 4}, {operatingBlock: activeBlock == 5}]">
+                            <div class="projects__img">
+                                <div class="projects__link">
+                                    <i class="fas fa-link"></i>
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <img src="./images/project/photo4.png">
                             </div>
-                            <img src="./images/project/photo4.png">
-                        </div>
-                        <div class="projects__img-text">
-                            <h5>Claritas Etiam Processus</h5>
-                            <p>
-                                Photography, Nature
-                            </p>
+                            <div class="projects__img-text">
+                                <h5>Claritas Etiam Processus</h5>
+                                <p>
+                                    Photography, Nature
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-xl-4">
-                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 4}]">
-                        <div class="projects__img">
-                            <div class="projects__link">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-search"></i>
+    
+                    <div class="col-xl-4">
+                        <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 4}]">
+                            <div class="projects__img">
+                                <div class="projects__link">
+                                    <i class="fas fa-link"></i>
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <img src="./images/project/photo5.png">
                             </div>
-                            <img src="./images/project/photo5.png">
-                        </div>
-                        <div class="projects__img-text">
-                            <h5>Quam Nutamus Farum</h5>
-                            <p>
-                                Graphic Design, Mock-Up
-                            </p>
+                            <div class="projects__img-text">
+                                <h5>Quam Nutamus Farum</h5>
+                                <p>
+                                    Graphic Design, Mock-Up
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-xl-4">
-                    <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 4}]">
-                        <div class="projects__img">
-                            <div class="projects__link">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-search"></i>
+    
+                    <div class="col-xl-4">
+                        <div class="projects__item" :class="[{operatingBlock: activeBlock == 1}, {operatingBlock: activeBlock == 4}]">
+                            <div class="projects__img">
+                                <div class="projects__link">
+                                    <i class="fas fa-link"></i>
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <img src="./images/project/photo6.png">
                             </div>
-                            <img src="./images/project/photo6.png">
-                        </div>
-                        <div class="projects__img-text">
-                            <h5>Usus Legentis Videntur</h5>
-                            <p>
-                                Photography, Holiday
-                            </p>
+                            <div class="projects__img-text">
+                                <h5>Usus Legentis Videntur</h5>
+                                <p>
+                                    Photography, Holiday
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </template>
             </div>
 
             <div class="row justify-content-center text-center">

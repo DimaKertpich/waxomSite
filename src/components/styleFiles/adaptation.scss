@@ -1,0 +1,46 @@
+@import 'style';
+
+// --- Header
+
+@media only screen and(max-width: 1200px){
+
+    .header{
+
+        &__adptMenu{
+            display: none;       
+        }
+
+        &__bar{
+            padding-top: 72px;
+            display: block;
+
+            i{
+                font-size: 26px;
+                color: $colorWhite;
+                cursor: pointer;
+            }
+
+        }
+
+        &__hideMenu{
+            right: 0px;
+        }
+
+        .hideMenuBar{
+            display: none;
+        }
+    }
+}
+
+@media only screen and(max-width: 992px){
+
+    // --- Header
+
+    .header{
+
+        &__circle ul{
+
+            padding-top: 120px;
+        }
+    }
+}

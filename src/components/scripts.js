@@ -4,7 +4,8 @@ export default{
              arrayImagesClass: ['sliderImageOne','sliderImageTwo','sliderImageThree','sliderImageFour','sliderImageFive'],
              currentlyImage: 0,
              activeBlock: 0,
-             loadMore: false
+             loadMore: false,
+             toggleHideMenu: false
             }
     },
 

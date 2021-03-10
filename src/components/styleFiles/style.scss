@@ -135,6 +135,66 @@
         border: 1px solid $headerCircleColorBorder;
         border-radius: 10px;
     }
+
+    &__bar{
+        display: none;
+    }
+
+    &__hideMenu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 340px;
+        height: 100%;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.4);
+        
+
+        ul{
+            padding: 100px 0 0 30px;
+
+            li{
+                @include montserrat(300);
+
+                font-size: 18px;
+                line-height: 32px;
+                list-style-type: none;
+                color: $colorWhite;
+                cursor: pointer;
+                width: 94px;
+            }
+
+            :hover{
+                color: $colorHover;
+            }
+
+            :nth-child(9){
+                display: inline;
+                font-size: 22px;
+                margin-right: 20px;
+            }
+
+            :nth-child(10){
+                font-size: 22px;
+                display: inline;
+            }
+        }
+
+    }
+
+    &__hideMenuBar{
+        position: absolute;
+        top: 96px;
+        right: 20px;
+        font-size: 26px;
+        color: $colorWhite;
+        cursor: pointer;
+        
+    }
+
+    &__hideMenu{
+        right: -340px;
+    }
 }
 
 .header:before{
