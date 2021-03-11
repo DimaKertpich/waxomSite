@@ -1,8 +1,9 @@
 @import 'style';
 
-// --- Header
 
 @media only screen and(max-width: 1200px){
+
+    // --- Header
 
     .header{
 
@@ -30,6 +31,15 @@
             display: none;
         }
     }
+
+    // --- Realization
+
+    .realization{
+
+        &__img-center{
+            
+        }
+    }
 }
 
 @media only screen and(max-width: 992px){
@@ -40,6 +50,31 @@
 
         &__circle ul{
             padding-top: 120px;
+        }
+    }
+
+    // --- Realization
+
+    .realization{
+
+        padding-bottom: 161px;
+
+        &__img-left,
+        &__img-right{
+            
+            img{
+                width: 580px;
+            }
+        }
+
+        &__img-center{
+            
+            top: 48px;
+            margin-left: -290px;
+
+            img{
+                width: 580px;
+            }
         }
     }
 }
@@ -62,6 +97,31 @@
 
             h3{
                 font-size: 42px;
+            }
+        }
+    }
+
+    // --- Realization
+
+    .realization{
+
+        padding-bottom: 140px;
+
+        &__img-left,
+        &__img-right{
+            
+            img{
+                width: 540px;
+            }
+        }
+
+        &__img-center{
+            
+            top: 65px;
+            margin-left: -260px;
+
+            img{
+                width: 520px;
             }
         }
     }
@@ -90,6 +150,32 @@
             font-size: 26px;
             padding-top: 200px;
         }
+
+    }
+
+    // --- Realization
+
+    .realization{
+
+        padding-bottom: 46px;
+
+        &__img-left,
+        &__img-right{
+            
+            img{
+                width: 380px;
+            }
+        }
+
+        &__img-center{
+            
+            top: 77px;
+            margin-left: -175px;
+
+            img{
+                width: 350px;
+            }
+        }
     }
 }
 
@@ -113,6 +199,31 @@
 
         &__circle{
             display: none;
+        }
+    }
+
+    // --- Realization
+
+    .realization{
+
+        padding-bottom: 11px;
+
+        &__img-left,
+        &__img-right{
+            
+            img{
+                width: 330px;
+            }
+        }
+
+        &__img-center{
+            
+            top: 78px;
+            margin-left: -146px;
+
+            img{
+                width: 292px;
+            }
         }
     }
 }
