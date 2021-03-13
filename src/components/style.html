@@ -501,19 +501,26 @@
     <section class="counters">
         <div class="container">
             <div class="row justify-content-around text-center">
-                <div class="col-lx-2 text">
+
+                <div class="col-md-2 col-sm-2 col-2">
+                    <div class="counters__arrows">
+                        <i @click="changesCountersPrev" class="fas fa-chevron-left"></i>
+                    </div>
+                </div>
+
+                <div :class="{countersActive: doCounters == 0}" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivatedCounters">
                     <div class="counters__item">
                         <div class="counters__icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <div class="counters__text">
+                        <div class="counters__text ">
                             <h4>3587</h4>
                             <span>satisfied clients</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lx-2 text text-center">
+                <div :class="[{countersActive: doCounters == 0},{countersActive: doCounters == 1}]" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivatedCounters">
                     <div class="counters__item">
                         <div class="counters__icon">
                             <i class="fas fa-mug-hot"></i>
@@ -525,7 +532,7 @@
                     </div>
                 </div>
 
-                <div class="col-lx-2 text text-center">
+                <div :class="[{countersActive: doCounters == 1},{countersActive: doCounters == 2}]" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivatedCounters">
                     <div class="counters__item">
                         <div class="counters__icon">
                             <i class="far fa-comment-dots"></i>
@@ -537,7 +544,7 @@
                     </div>
                 </div>
 
-                <div class="col-lx-2 text text-center">
+                <div :class="[{countersActive: doCounters == 2},{countersActive: doCounters == 3}]" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivatedCounters">
                     <div class="counters__item">
                         <div class="counters__icon">
                             <i class="far fa-heart"></i>
@@ -549,7 +556,7 @@
                     </div>
                 </div>
 
-                <div class="col-lx-2 text text-center">
+                <div :class="{countersActive: doCounters == 3}" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivatedCounters">
                     <div class="counters__item">
                         <div class="counters__icon">
                             <i class="fas fa-bell"></i>
@@ -558,6 +565,12 @@
                             <h4>900</h4>
                             <span>we launched</span>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-2 col-2">
+                    <div class="counters__arrows ">
+                        <i @click="changesCountersNext" class="fas fa-chevron-right"></i>
                     </div>
                 </div>
             </div>

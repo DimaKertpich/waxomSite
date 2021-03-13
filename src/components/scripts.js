@@ -5,7 +5,8 @@ export default{
              currentlyImage: 0,
              activeBlock: 0,
              loadMore: false,
-             toggleHideMenu: false
+             toggleHideMenu: false,
+             doCounters: 1
             }
     },
 
@@ -30,6 +31,18 @@ export default{
 
         activeBlockFn(x){
             this.activeBlock = x;
+        },
+
+        changesCountersPrev(){
+            if(this.doCounters > 0){
+                this.doCounters--;
+            }
+        },
+
+        changesCountersNext(){
+            if(this.doCounters < 3){
+                this.doCounters++;
+            }
         }
 
     },

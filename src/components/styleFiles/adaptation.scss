@@ -53,6 +53,18 @@
         }
 
     }
+
+    // --- Counters
+
+    .counters{
+
+        &__text{
+
+            span{
+                font-size: 13px;
+            }
+        }
+    }
 }
 
 @media only screen and(max-width: 992px){
@@ -131,6 +143,29 @@
             text-align: center;
         }
 
+    }
+
+    // --- Counters
+
+    .counters{
+
+        .deactivatedCounters{
+            display: none;
+        }
+
+        .countersActive{
+            display: block;
+        }
+
+        &__arrows{
+            padding-top: 134px;
+            cursor: pointer;
+
+            i{
+                color: $colorWhite;
+                font-size: 32px;
+            }
+        }
     }
 
 }
@@ -340,8 +375,6 @@
 
     .devices{
 
-
-
         &__img{
 
             img{
@@ -349,6 +382,36 @@
             }
         }
 
+    }
+
+    // --- Counters
+
+    .counters{
+
+        &__icon{
+
+            i{
+                font-size: 30px;
+            }
+        }
+
+        &__text{
+
+            h4{
+                font-size: 40px;
+            }
+
+            span{
+                font-size: 12px;
+            }
+        }
+
+        &__arrows{
+
+            i{
+                font-size: 22px;
+            }
+        }
     }
 }
 
