@@ -77,6 +77,31 @@
             }
         }
     }
+
+    // --- Boxes
+
+    .boxes{
+
+        &__text{
+            
+            h4{
+                font-size: 22px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+
+        &__btn{
+            
+            button{
+                @include btn(140px, 44px);
+
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 @media only screen and(max-width: 769px){
@@ -125,6 +150,56 @@
             }
         }
     }
+
+    // --- Boxes
+
+    .boxes{
+
+        &__text{
+            
+            h4{
+                font-size: 24px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+
+        &__btn{
+            
+            button{
+                @include btn(170px, 50px);
+
+                font-size: 16px;
+            }
+        }
+    }
+
+    // --- projects
+
+    .projects{
+
+        &__img{
+
+            img{
+                height: 180px;
+            }
+        }
+
+        &__img-text{
+
+            h5{
+                font-size: 16px;
+            }
+
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+
+    
 }
 
 @media only screen and(max-width: 576px){
@@ -174,6 +249,35 @@
 
             img{
                 width: 350px;
+            }
+        }
+    }
+
+    // --- Boxes
+
+    .boxes{
+
+        &__btn{
+            text-align: left;
+        }
+    }
+
+    // --- projects
+
+    .projects{
+
+        &__chooseClass{
+
+            button{
+                font-size: 10px;
+                pad: 5px 6px;
+            }
+        }
+
+        &__img{
+
+            img{
+                height: 140px;
             }
         }
     }
