@@ -586,8 +586,16 @@
 // --- devices ---
 
 .devices{
-    padding-top: 80px;
+    padding: 80px 0 200px;
     overflow: hidden;
+    position: relative;
+
+    &__img{
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        margin-right: 76px;
+    }
 
     &__text{
 

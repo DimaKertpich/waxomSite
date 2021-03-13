@@ -32,13 +32,26 @@
         }
     }
 
-    // --- Realization
+    // --- Devices
 
-    .realization{
+    .devices{
 
-        &__img-center{
-            
+        padding-bottom: 120px;
+
+        &__text ul{
+
+            padding-left: 20px;
         }
+
+        &__img{
+
+            margin-right: 142px;
+
+            img{
+                width: 360px;
+            }
+        }
+
     }
 }
 
@@ -102,6 +115,24 @@
             }
         }
     }
+
+    // --- Devices
+
+    .devices{
+        position: relative;
+        padding-bottom: 20px;
+
+        &__img{
+            position: relative;
+            width: 100%;
+            top: 20px;
+            right: auto;
+            margin-right: 0;
+            text-align: center;
+        }
+
+    }
+
 }
 
 @media only screen and(max-width: 769px){
@@ -199,8 +230,31 @@
         }
     }
 
-    
+    // --- Devices
+
+    .devices{
+
+        &__text{
+
+            ul{
+
+                padding-left: 0px;
+
+                li{
+
+                    font-size: 14px;
+
+                    i{
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+
+    }
+
 }
+    
 
 @media only screen and(max-width: 576px){
 
@@ -281,6 +335,21 @@
             }
         }
     }
+
+    // --- Devices
+
+    .devices{
+
+
+
+        &__img{
+
+            img{
+                width: 300px;
+            }
+        }
+
+    }
 }
 
 @media only screen and(max-width: 360px){
@@ -327,6 +396,18 @@
 
             img{
                 width: 292px;
+            }
+        }
+    }
+
+    // --- Project
+
+    .projects{
+
+        &__img{
+
+            img{
+                height: 110px;
             }
         }
     }
