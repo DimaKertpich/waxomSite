@@ -813,7 +813,10 @@
         background: $CalendarMonthBgHover;
     }
         
-    
+    &__hideBlock{
+        display: none;
+    }
+
 }
 
 // --- Partners --- 
@@ -1060,4 +1063,9 @@
         }
 
     }
+
+    .blockRight{
+        text-align: left;
+    }
 }
+

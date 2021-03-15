@@ -6,7 +6,8 @@ export default{
              activeBlock: 0,
              loadMore: false,
              toggleHideMenu: false,
-             doCounters: 1
+             doCounters: 1,
+             recentPostsAct: 0
             }
     },
 
@@ -42,6 +43,20 @@ export default{
         changesCountersNext(){
             if(this.doCounters < 3){
                 this.doCounters++;
+            }
+        },
+
+        activeRecentPostsActPrev(){
+
+            if(this.recentPostsAct > 0){
+                this.recentPostsAct--;
+            }
+        },
+
+        activeRecentPostsActNext(){
+
+            if(this.recentPostsAct < 2){
+                this.recentPostsAct++;
             }
         }
 

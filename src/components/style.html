@@ -508,7 +508,7 @@
                     </div>
                 </div>
 
-                <div :class="{countersActive: doCounters == 0}" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivatedCounters">
+                <div :class="{active: doCounters == 0}" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivated">
                     <div class="counters__item">
                         <div class="counters__icon">
                             <i class="fas fa-users"></i>
@@ -520,7 +520,7 @@
                     </div>
                 </div>
 
-                <div :class="[{countersActive: doCounters == 0},{countersActive: doCounters == 1}]" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivatedCounters">
+                <div :class="[{active: doCounters == 0},{active: doCounters == 1}]" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivated">
                     <div class="counters__item">
                         <div class="counters__icon">
                             <i class="fas fa-mug-hot"></i>
@@ -532,7 +532,7 @@
                     </div>
                 </div>
 
-                <div :class="[{countersActive: doCounters == 1},{countersActive: doCounters == 2}]" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivatedCounters">
+                <div :class="[{active: doCounters == 1},{active: doCounters == 2}]" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivated">
                     <div class="counters__item">
                         <div class="counters__icon">
                             <i class="far fa-comment-dots"></i>
@@ -544,7 +544,7 @@
                     </div>
                 </div>
 
-                <div :class="[{countersActive: doCounters == 2},{countersActive: doCounters == 3}]" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivatedCounters">
+                <div :class="[{active: doCounters == 2},{active: doCounters == 3}]" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivated">
                     <div class="counters__item">
                         <div class="counters__icon">
                             <i class="far fa-heart"></i>
@@ -556,7 +556,7 @@
                     </div>
                 </div>
 
-                <div :class="{countersActive: doCounters == 3}" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivatedCounters">
+                <div :class="{active: doCounters == 3}" class="col-lx-2 col-lg-2 col-md-3 col-sm-4 col-4 deactivated">
                     <div class="counters__item">
                         <div class="counters__icon">
                             <i class="fas fa-bell"></i>
@@ -581,7 +581,7 @@
     <section class="recentPosts">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-xl-8 text-center">
+                <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 text-center">
                     <div class="recentPosts__title">
                         <h3>Recent Posts</h3>
 
@@ -593,8 +593,8 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-lg-4">
+            <div class="row justify-content-around">
+                <div :class="{active: recentPostsAct == 0}" class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-10 deactivated">
                     <div class="recentPosts__post">
                         <div class="recentPosts__img">
                             <img src="./images/recentPosts/photo1.png">
@@ -618,7 +618,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div :class="{active: recentPostsAct == 1}" class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-10 deactivated">
                     <div class="recentPosts__post">
                         <div class="recentPosts__img">
                             <img src="./images/recentPosts/photo2.png">
@@ -642,7 +642,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div :class="{active: recentPostsAct == 2}" class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-10 deactivated">
                     <div class="recentPosts__post">
                         
                         <div class="recentPosts__img">
@@ -666,6 +666,15 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row justify-content-around text-center">
+                <div class="col-md-4 col-sm-6 col-8 recentPosts__hideBlock">
+                    <div class="recentPosts__arrows">
+                        <i @click="activeRecentPostsActPrev" class="far fa-arrow-alt-circle-left"></i>
+                        <i @click="activeRecentPostsActNext" class="far fa-arrow-alt-circle-right"></i>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -673,26 +682,26 @@
     <section class="partners">
         <div class="container">
             <div class="row justify-content-center text-center align-items-center">
-                <div class="col-xl-3">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                     <div class="partners__logos">
                         <img src="./images/partners/logo-01.png">
                     </div>
                     
                 </div>
 
-                <div class="col-xl-3">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                     <div class="partners__logos">
                         <img src="./images/partners/logo-02.png">
                     </div>
                 </div>
 
-                <div class="col-xl-3">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                     <div class="partners__logos">
                         <img src="./images/partners/logo-03.png">
                     </div>
                 </div>
 
-                <div class="col-xl-3">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                     <div class="partners__logos">
                         <img src="./images/partners/logo-04.png">
                     </div>
@@ -705,7 +714,7 @@
     <section class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                         <div class="footer__logo">
                             <div class="footer__logo-img">
                                 <img src="./images/logos.png">
@@ -731,7 +740,7 @@
                     </div>
                 
 
-                <div class="col-xl-3">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                     <div class="footer__block">
                         <h3>Recent Posts</h3>
                         
@@ -769,7 +778,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                     <div class="footer__block">
                         <h3>Our Twitter</h3>
 
@@ -807,18 +816,18 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                     <div class="footer__block">
                         <h3>Dribbble Widget</h3>
 
                         <div class="row">
-                            <div class="col-xl-6">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-4">
                                 <div class="footer__block-img">
                                     <img src="./images/footerImg/photo.png">
                                 </div>
                             </div>
 
-                            <div class="col-xl-6">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-4">
                                 <div class="footer__block-img">
                                     <img src="./images/footerImg/photo2.png">
                                 </div>
@@ -826,13 +835,13 @@
                         </div>
 
                         <div class="row" style="margin-top: 20px;">
-                            <div class="col-xl-6">
+                            <div class="col-xl-6  col-lg-6 col-md-6 col-sm-4 col-4">
                                 <div class="footer__block-img">
                                     <img src="./images/footerImg/photo3.png">
                                 </div>
                             </div>
 
-                            <div class="col-xl-6">
+                            <div class="col-xl-6  col-lg-6 col-md-6 col-sm-4 col-4">
                                 <div class="footer__block-img">
                                     <img src="./images/footerImg/photo4.png">
                                 </div>
@@ -849,7 +858,7 @@
     <section class="copyRight">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-lg-5">
+                <div class="col-xl-5 col-lg-6 col-md-7 col-sm-6 col-12">
                     <ul class="copyRight__left">
                         <li>Copyright &copy;2015 <span>Waxom</span></li>
                         <li><span>Privacy Policy</span></li>
@@ -858,7 +867,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-4 text-right">
+                <div class="col-xl-4 col-lg-5 col-md-5 col-sm-6 col-12 blockRight">
                     <ul class="copyRight__right">
                         <li>Designed by <span>ThemeFire</span></li>
                         <li>Only on <span>Envato Market</span></li>

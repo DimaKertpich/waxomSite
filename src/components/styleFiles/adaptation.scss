@@ -69,12 +69,20 @@
 
 @media only screen and(max-width: 992px){
 
+    .deactivated{
+        display: none;
+    }
+    
+    .active{
+        display: block;
+    }
+
     // --- Header
 
     .header{
 
         &__circle ul{
-            padding-top: 120px;
+            padding-top: 90px;
         }
     }
 
@@ -149,13 +157,6 @@
 
     .counters{
 
-        .deactivatedCounters{
-            display: none;
-        }
-
-        .countersActive{
-            display: block;
-        }
 
         &__arrows{
             padding-top: 134px;
@@ -168,6 +169,74 @@
         }
     }
 
+    // --- RecentPosts
+
+    .recentPosts{
+
+        &__hideBlock{
+            display: block;
+        }
+
+        &__arrows{
+
+            padding-top: 26px;
+
+            i{
+                font-size: 24px;
+                cursor: pointer;
+                color: $footerReadMore;
+            }
+
+            :hover{
+                color: $colorHover;
+            }
+
+            :nth-child(1){
+                margin-right: 10px;
+            }
+        }
+    }
+
+    // --- CopyRight
+
+    .copyRight{
+
+        ul{
+
+            li{
+                font-size: 11px;
+            }
+        }
+
+        &__left{
+    
+            li{
+    
+                ::after{
+                    top: -1px;
+                    right: -5px;
+                }
+            }
+    
+        }
+
+        &__right{
+    
+            :nth-child(1){
+                
+                margin-right: 4px;
+    
+                ::after{
+                    top: 1px;
+                    right: -1px;
+                }
+            }
+    
+        }
+
+    }
+
+    
 }
 
 @media only screen and(max-width: 769px){
@@ -284,6 +353,45 @@
                     }
                 }
             }
+        }
+
+    }
+
+      // --- CopyRight
+
+      .copyRight{
+
+        ul{
+
+            li{
+                font-size: 10px;
+            }
+        }
+
+        &__left{
+    
+            li{
+                margin-right: 6px;
+                ::after{
+                    top: -1px;
+                    right: -3px;
+                }
+            }
+    
+        }
+
+        &__right{
+    
+            :nth-child(1){
+                
+                margin-right: 4px;
+    
+                ::after{
+                    top: 1px;
+                    right: -1px;
+                }
+            }
+    
         }
 
     }
@@ -413,6 +521,15 @@
             }
         }
     }
+
+    // --- CopyRight
+
+    .copyRight{
+
+        .blockRight{
+            text-align: left;
+        }
+    }
 }
 
 @media only screen and(max-width: 360px){
@@ -471,6 +588,22 @@
 
             img{
                 height: 110px;
+            }
+        }
+    }
+
+    // --- RecentPosts
+
+    .recentPosts{
+
+        &__text{
+
+            h4{
+                font-size: 17px;
+            }
+
+            p{
+                font-size: 12px;
             }
         }
     }
